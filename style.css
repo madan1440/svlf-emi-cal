@@ -1,0 +1,201 @@
+/* Modern UI base */
+body {
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #111827;
+  margin: 0;
+}
+
+.app-container {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+.calculator-card,
+.result-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  margin-bottom: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.calculator-card:hover,
+.result-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.12);
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+.form-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+.form-control {
+  border-radius: 14px;
+  border: 1px solid #d1d5db;
+  padding: 12px 14px;
+  font-size: 16px; /* prevent mobile zoom */
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.interest-toggle {
+  display: flex;
+  gap: 12px;
+}
+
+.interest-toggle label {
+  flex: 1;
+  background: #f3f4f6;
+  border-radius: 14px;
+  padding: 12px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.interest-toggle label:hover { background: #e5e7eb; }
+
+.interest-toggle input { display: none; }
+
+.interest-toggle input:checked + span {
+  color: #4f46e5;
+  font-weight: 600;
+}
+
+.hint {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.calculate-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  padding: 14px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.calculate-btn:hover {
+  opacity: 0.95;
+  transform: scale(1.02);
+}
+
+.emi-box {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.emi-box .label {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.emi-value {
+  font-size: 36px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.result-tile {
+  background: #f9fafb;
+  border-radius: 16px;
+  padding: 16px;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+.result-tile:hover { background: #f3f4f6; }
+
+.result-tile .label {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.result-tile .value {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* R.C toggle styles */
+.rc-toggle { margin-top: 10px; }
+
+.toggle-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.toggle-label input { display: none; }
+
+.toggle-slider {
+  width: 46px;
+  height: 26px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  position: relative;
+  transition: background 0.2s ease;
+}
+
+.toggle-slider::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease;
+}
+
+.toggle-label input:checked + .toggle-slider {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+}
+
+.toggle-label input:checked + .toggle-slider::after {
+  transform: translateX(20px);
+}
+
+.toggle-text {
+  font-size: 14px;
+  color: #374151;
+  font-weight: 600;
+}
