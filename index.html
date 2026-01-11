@@ -48,7 +48,7 @@
         <div class="interest-toggle">
           <label>
             <input type="radio" name="interest_type" value="percent" checked onclick="toggleInterestFields()">
-            <span>% per annum</span>
+            <span>% per year</span>
           </label>
           <label>
             <input type="radio" name="interest_type" value="rupees" onclick="toggleInterestFields()">
@@ -58,14 +58,13 @@
       </div>
 
       <div class="col-12" id="interest_percent_group">
-        <label class="form-label">Interest (% per annum)</label>
+        <label class="form-label">Interest (% per year)</label>
         <input type="number" class="form-control" name="interest_percent" value="24" min="0" step="0.01">
       </div>
 
       <div class="col-12" id="interest_rupees_group" style="display:none;">
         <label class="form-label">Interest (₹ per year)</label>
-        <input type="number" class="form-control" name="interest_rupees" value="2" min="0" step="0.01">
-        <div class="hint">Hint: 1 ₹ = 12% per annum</div>
+        <input type="number" class="form-control" name="interest_rupees" value="2" min="0" step="0.01">        
       </div>
 
       <!-- R.C Charges -->
@@ -80,7 +79,7 @@
           <label class="toggle-label">
             <input type="checkbox" name="rc_include" checked>
             <span class="toggle-slider"></span>
-            <span class="toggle-text">Include R.C in EMI</span>
+            <span class="toggle-text">Include R.C</span>
           </label>          
         </div>
       </div>
@@ -130,4 +129,5 @@
 <script src="script.js"></script>
 </body>
 </html>
+
 
